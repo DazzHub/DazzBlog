@@ -1,0 +1,50 @@
+.container {
+    width: 90%;
+    height: auto;
+
+    display: grid;
+
+    margin-left: 5%;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 7px;
+}
+
+.card {      
+    width: 100%;
+    height: 100%;
+}
+
+.card_title {
+    display: flex;
+    align-items: center;
+}
+
+.card_title img {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    margin-right: 5px;
+}
+
+.card_body {
+
+}
+
+.card_body p {
+    margin: 0;
+
+    margin-bottom: 5px;
+
+    margin-left: 53px;
+}
+
+@media (max-width: 300px) {
+    .card_body p {
+        margin: 0;
+
+        text-align: left;
+    }
+}

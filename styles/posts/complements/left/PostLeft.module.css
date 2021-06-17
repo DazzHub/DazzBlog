@@ -1,0 +1,153 @@
+.container_left {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+/* cards posts*/
+.post_container {
+    width: 100%;
+    height: 100%;
+    
+    display: grid;  
+    place-items: center;  
+    grid-auto-rows: 160px;
+
+    grid-gap: 20px;     
+    
+    position: relative;
+}
+
+.card {
+    width: 90%;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.card_grid{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 235px auto;      
+    
+
+    position: relative;
+}
+
+.card_left {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow:hidden;
+}
+
+.card_left img {
+    width: 100%;
+    height: 100%;    
+
+    object-fit: cover;
+
+    border-radius: 8px;     
+    
+    transition:all 0.5s ease-in-out;
+}
+
+.card:hover .card_left img{
+    transform: scale(1.09);    
+}
+
+.card_right {
+    width: 100%;
+    height: 100%;  
+    
+    word-wrap: break-word;
+}
+
+.card_title img {
+    margin-right: 2px;
+    width: 10px;
+    height: 12px;
+}
+
+.card_title {
+    color: #2496EE;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+    display: flex;
+    align-items: center;  
+    
+    margin-left: 5px;
+}
+
+.card_body {
+    color: #2A3744;
+
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 1.2em;
+
+    margin-left: 5px;
+}
+
+.card_body p {
+    margin: 0px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.card_right::before, .card_footer {
+    position: absolute;
+    margin-left: 5px;
+    bottom: 0;
+}
+
+.card_footer img {
+    margin-right: 5px;
+}
+
+@media (max-width: 900px) {
+    .post_container {
+        grid-auto-rows: auto;
+    }
+    
+    .card_left {
+        margin-top: 20px;
+    }
+
+    .card_right {
+        margin-bottom: 35px;
+    }
+
+    .card_grid{
+        grid-template-columns: 100%;
+        justify-items: center;
+    }
+
+    .card_left {
+        text-align: center;
+
+        display: block;
+    }
+    
+    .card_left img {
+        width: 60%;
+        height: 200px;
+    }
+
+}

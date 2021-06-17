@@ -1,0 +1,158 @@
+.navbar {
+    width: 100%;
+    height: 50px;
+
+    background-color: #2F4153;    
+    border-bottom: rgba(0, 0, 0, 0.2) 1px solid;    
+    
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+
+    z-index: 100;
+}
+
+.navbar .bars_container{
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+   
+    position: relative;    
+}
+
+.navbar .bars_container .bars{
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    transition: all .5s ease-in-out;;
+}
+
+.navbar .navbar_logo{
+    display: flex;
+    align-items: center;
+
+    margin-left: 10px;
+}
+
+.navbar .navbar_logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.navbar .navbar_logo p {
+    margin-left: 5px;
+    font-weight: bold;
+    color: #dddddd;
+}
+
+.navbar .bars_container .bars::before, 
+.navbar .bars_container .bars::after {
+    content: '';
+    position: absolute;
+
+    width: 30px;
+    height: 5px;
+
+    background-color: black;
+}
+
+.navbar .bars_container .bars::before{
+    transform: translateY(-10px);
+}
+
+.navbar .bars_container .bars::after{
+    transform: translateY(10px);
+}
+
+.open {
+    background: transparent;
+    box-shadow: none;
+
+    transform: rotate(180deg);
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;    
+}
+
+/* TEXT RIGHT */
+.navbar .ul_left li{
+    display: grid;
+    justify-content: left;
+
+    margin-left: 5px;
+}
+
+.navbar .ul_left li a{
+    margin-top: 10px;
+    color: #dddddd;
+}
+
+.navbar .ul_right {
+    right: 0;
+    position: absolute;    
+}
+
+.navbar .ul_right li{
+    margin-right: 20px;    
+}
+
+.navbar .ul_right li a{
+    margin-right: 20px;  
+    color: #dddddd;  
+}
+
+.menuFlex {
+    top: 50px;
+
+    width: 190px;
+    height: 100%;    
+
+    background-color: #2F4153; 
+    position: fixed;
+
+    animation: menuflexopen 0.4s;
+}
+
+@keyframes menuflexopen {
+    0% { transform: translateX(-190px); }
+    100% { transform: translateX(0); }
+}
+
+.menuFlexClose {
+    animation: menuflexclose 0.4s ;
+}
+
+@keyframes menuflexclose {
+    0% { 
+        transform: translateX(0); 
+        background-color: #2F4153; 
+
+        top: 50px;
+
+        width: 190px;
+        height: 100%;
+        position: fixed;
+    }
+
+    100% {
+        transform: translateX(-190px);    
+        
+        top: 50px;
+
+        width: 190px;
+        height: 100%;    
+        position: fixed;
+    }
+}
+

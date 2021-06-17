@@ -1,0 +1,33 @@
+.footer {
+    width: 100%;
+    height: auto;
+
+    min-height: 60px;
+    max-height: 90px;
+
+    display: grid;
+    justify-content: center;
+
+    background-color: #2F4153;
+}
+
+.footer p {
+    color: #1d1d1b;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.f_icons {
+    display: flex;
+    align-items: center;
+
+    padding-top: 4px;
+}
+.f_icons img {
+    height: 22px;
+    width: 22px;
+
+    margin-right: 4px;
+    margin-left: 4px;
+}
